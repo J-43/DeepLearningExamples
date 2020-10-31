@@ -426,7 +426,7 @@ class Decoder(nn.Module):
         attention_context, attention_weights = self.attention_layer(
             attention_hidden, memory, processed_memory,
             attention_weights_cat, mask)
-
+        # mcm
         attention_weights_cum += attention_weights
         decoder_input = torch.cat(
             (attention_hidden, attention_context), -1)

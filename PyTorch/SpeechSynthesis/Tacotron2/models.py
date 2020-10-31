@@ -74,7 +74,7 @@ def get_model(model_name, model_config, cpu_run,
             model = Tacotron2__forward_is_infer(**model_config)
         else:
             model = Tacotron2(**model_config)
-    elif model_name == 'WaveGlow':
+    elif model_name == 'WaveGlow':     #aa
         if forward_is_infer:
             class WaveGlow__forward_is_infer(WaveGlow):
                 def forward(self, spect, sigma=1.0):
